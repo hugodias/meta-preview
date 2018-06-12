@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import SyntaxHighlighter from 'react-syntax-highlighter/prism';
+import { prism } from 'react-syntax-highlighter/styles/prism';
 import "./App.css";
 
 import MetaPreview from "./components/meta-preview";
@@ -34,6 +36,60 @@ class App extends Component {
   };
 
   render() {
+    const yarnCode = `
+    yarn add meta-preview
+    `;
+    const importReact = `
+    import MetaPreview from 'meta-preview';
+
+    class MyComponent extends Component {
+      constructor(props) {
+        super(props);
+          
+        this.state = {
+          title: "Post title",
+          link: "https://medium.com/@hugooodias",
+          description: "Post Description."
+        };
+
+        <!-- handle changes -->
+      }
+
+      render() {
+        return (
+          <MetaPreview
+            {...this.state}
+            onTitleChange={this.onTitleChange}
+            onDescriptionChange={this.onDescriptionChange}
+            onLinkChange={this.onLinkChange}
+          />
+        )
+      }
+    }
+    `;
+
+    const previewCode = `
+    import Preview from 'meta-preview';
+
+    class MyComponent extends Component {
+      constructor(props) {
+        super(props);
+          
+        this.state = {
+          title: "Post title",
+          link: "https://medium.com/@hugooodias",
+          description: "Post Description."
+        };
+      }
+
+      render() {
+        return (
+          <Preview {...this.state} />
+        )
+      }
+    }    
+    `;
+
     return (
       <div className="App">
         <div className="Preview">
@@ -64,11 +120,21 @@ class App extends Component {
           </h3>
 
           <h4> How to Install</h4>
-          <code>$ yarn add meta-preview</code>
+          <SyntaxHighlighter language="bash" style={prism}>
+            {yarnCode}
+          </SyntaxHighlighter>
+          <h4> Using </h4>
+          <SyntaxHighlighter language="javascript" style={prism}>
+            {importReact}
+          </SyntaxHighlighter>
 
-          <code>import MetaPreview from 'meta-preview';</code>
+          <h4>Preview only</h4>
 
-          <h4>Using only the preview</h4>
+          <SyntaxHighlighter language="javascript" style={prism}>
+            {previewCode}
+          </SyntaxHighlighter>
+
+          <h4> The result </h4>
 
           <div className="PreviewBox">
             <Preview {...this.state} />

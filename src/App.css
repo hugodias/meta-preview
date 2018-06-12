@@ -40,14 +40,20 @@ h3 {
   flex: 0;
   flex-grow: 0;
 }
+pre {
+  padding: 0 !important;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 1) !important;
+  font-size: 13px;
+}
 code {
   display: block;
   background: rgba(255, 255, 255, 0.3);
-  padding: 20px;
   color: rgba(24, 24, 24, 0.9);
   font-weight: 500;
+  padding: 0px;
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 20px;
+  
 }
 
 .PreviewBox {
