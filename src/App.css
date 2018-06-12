@@ -1,0 +1,77 @@
+html {
+  height: 100%;
+}
+body {
+  background: #fad037; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #f9326c,
+    #fad037
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #f9326c,
+    #fad037
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  min-height: 100%;
+}
+h1 {
+  font-family: "Oswald", sans-serif;
+}
+h2 {
+  font-size: 36px;
+  line-height: 40px;
+}
+h3 {
+  font-weight: 300;
+}
+.App {
+  margin: 0 auto;
+  width: 980px;
+  padding: 160px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Preview {
+  flex: 0;
+  flex-grow: 0;
+}
+code {
+  display: block;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  color: rgba(24, 24, 24, 0.9);
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+}
+
+.PreviewBox {
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.07), 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.Description {
+  padding: 0 40px;
+  flex: 1;
+  flex-grow: 1;
+}
+
+@media (max-width: 940px) {
+  .App {
+    display: block;
+    width: 100%;
+  }
+
+  .Preview {
+    align-self: center;
+    margin: 0 auto;
+    width: 380px;
+  }
+}
