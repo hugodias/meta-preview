@@ -3,8 +3,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 import { prism } from 'react-syntax-highlighter/styles/prism';
 import "./App.css";
 
-import MetaPreview from "./components/meta-preview";
-import Preview from "./components/preview";
+import { MetaPreview, Preview } from "meta-preview";
 
 class App extends Component {
   constructor(props) {
