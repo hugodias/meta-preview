@@ -14,7 +14,7 @@ $ yarn add meta-preview
 ### Usage
 ```js
 import React, { Component } from 'React';
-import MetaPreview from 'meta-preview';
+import { MetaPreview } from 'meta-preview';
 
 class MyComponent extends Component {
   constructor(props) {
@@ -44,7 +44,7 @@ class MyComponent extends Component {
 
 #### Preview only
 ```js
-import Preview from 'meta-preview';
+import { Preview } from 'meta-preview';
 
 class MyComponent extends Component {
   constructor(props) {
