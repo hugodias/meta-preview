@@ -81,7 +81,7 @@ const Description = styled.p`
   text-overflow: ellipsis;
 `;
 
-const Date = styled.span`
+const Date = styled.small`
   color: #808080;
   font-size: 13px;
   line-height: 18.2px;

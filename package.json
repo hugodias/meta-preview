@@ -4,7 +4,7 @@
   "homepage": "https://hugodias.github.io/meta-preview",
   "private": true,
   "dependencies": {
-    "meta-preview": "^1.0.1",
+    "meta-preview": "^1.0.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-scripts": "1.1.4",
